@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadPhone</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Black+Ops+One&family=Caveat:wght@500;600&family=Cookie&family=Edu+QLD+Beginner:wght@500;600;700&family=Josefin+Sans:wght@100&family=Lato:ital,wght@0,400;1,300&family=Macondo&family=Merriweather:ital@0;1&family=Pixelify+Sans&family=Roboto+Slab&family=Shadows+Into+Light+Two&family=Teko&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Black+Ops+One&family=Caveat:wght@500;600&family=Chakra+Petch&family=Cookie&family=Edu+QLD+Beginner:wght@500;600;700&family=Josefin+Sans:wght@100&family=Lato:ital,wght@0,400;1,300&family=Macondo&family=Merriweather:ital@0;1&family=Pixelify+Sans&family=Roboto+Slab&family=Shadows+Into+Light+Two&family=Teko&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+    <style>
+        body {
+            background-color: rgb(36, 33, 33);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            z-index: 1;
+        }
+
+        nav {
+            background-color: transparent;
+        }
+
+        .dropdown-menu {
+            background-color: transparent;
+        }
+
+        #navbarToggleExternalContent {
+            position: relative;
+        }
+
+        .social-link ul {
+            list-style-type: none;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .social-link li {
+            display: inline-block;
+        }
+
+        .social-link a i {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            background: #000;
+            margin-right: 5px;
+            color: #fff;
+        }
+
+        .social-link a i.fa-facebook {
+            background-color: #3B5998;
+        }
+
+        .social-link a i.fa-twitter {
+            background-color: #55ACEE;
+        }
+
+        .social-link a i.fa-google-plus {
+            background-color: #DD4B39;
+        }
+
+        .social-link a i.fa-linkedin {
+            background-color: #0976B4;
+        }
+
+        .social-link a i.fa-instagram {
+            background-color: #B7242A;
+        }
+
+        .newbtn {
+            font-size: 25px;
+            margin-top: 420px;
+            margin-left: 100px;
+            padding: 15px;
+            width: 200px;
+            font-weight: bolder;
+            border-radius: 50px;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: orangered;
+            color: white;
+            font-family: Chakra Petch;
+        }
+
+        .newbtn:hover {
+            background-color: black;
+            color: rgb(255, 79, 16);
+        }
+
+        .bbtn {
+            padding: 19px;
+            width: 200px;
+            font-weight: bolder;
+            border-radius: 50px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            font-family: Chakra Petch;
+            margin-top: 10px;
+        }
+
+        .bbtn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .card {
+            background: rgb(66, 66, 66);
+            width: 100%;
+            /* Use full width for small screens */
+            max-width: 500px;
+            /* Limit width for larger screens */
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 25px;
+            height: auto;
+            margin: 20px auto;
+            /* Center the card on larger screens */
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            color: rgb(255, 82, 19);
+            font-weight: bold;
+            text-shadow: 2px 4px rgb(0, 0, 0);
+            font-family: Teko;
+            font-size: 40px;
+        }
+
+        .card-text {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: large;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            /* Make the image responsive */
+            height: auto;
+            border-radius: 25px;
+        }
+
+        .card-link {
+            font-size: larger;
+            font-weight: bolder;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                .nav-btn {
+                    margin-top: 150px;
+                }
+            }
+        }
+
+
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            line-height: 1.15;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .column {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .section-title {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            padding: 45px 0 30px 0;
+        }
+
+        .section-title::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            left: 0;
+            background: #eeeeee;
+        }
+
+        .effect {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .effect .effect-img {
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        .effect .effect-img img {
+            width: 100%;
+            height: auto;
+            transition: all .3s;
+        }
+
+        .effect:hover .effect-img img {
+            transform: scale(1.2);
+        }
+
+        .effect .effect-text {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 83px;
+            left: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(42, 42, 42, 0.5);
+            overflow: hidden;
+            transition: all .10s ease-in;
+            opacity: 0;
+        }
+
+        .effect .effect-text .inner {
+            position: absolute;
+            padding: 15px;
+            z-index: 1;
+        }
+
+        .effect .effect-text:before,
+        .effect .effect-text:after {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 0;
+            content: '';
+        }
+
+        .effect .effect-text:before {
+            border-top: 5px solid white;
+            border-right: 5px solid white;
+            left: -100%;
+            top: 0;
+        }
+
+        .effect .effect-text:after {
+            border-bottom: 5px solid white;
+            border-left: 5px solid white;
+            left: 100%;
+            bottom: 0;
+        }
+
+        .effect:hover .effect-text {
+            opacity: 1;
+        }
+
+        .effect:hover .effect-text:after,
+        .effect:hover .effect-text:before {
+            animation-delay: .2s;
+            animation-duration: .6s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        .effect:hover .effect-text:after {
+            animation-name: left-up;
+        }
+
+        .effect:hover .effect-text:before {
+            animation-name: right-dn;
+        }
+
+        .card1 {
+            background: transparent;
+            width: 500px;
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+        }
+
+        .card-title1 {
+            color: rgb(255, 82, 19);
+            text-shadow: 2px 4px rgb(0, 0, 0);
+            font-size: 220px;
+            height: 100px;
+            font-weight: 900;
+            padding-left: 10px;
+            font-family: Chakra Petch;
+        }
+
+        .card-subtitle1 {
+            color: rgb(255, 255, 255);
+            font-size: x-large;
+            margin-top: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+            font-family: Chakra Petch;
+
+        }
+
+        .card-text1 {
+            color: #8a8a8a;
+            margin-top: 65px;
+            font-weight: bold;
+            font-size: large;
+            text-align: justify;
+            padding: 10px;
+            font-family: Chakra Petch;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: orange;
+            padding-left: 10px;
+            font-family: Chakra Petch
+        }
+
+        @keyframes left-up {
+            0% {
+                left: 100%;
+                height: 0;
+            }
+
+            50% {
+                left: 0;
+                height: 0;
+            }
+
+            100% {
+                height: 100%;
+                left: 0;
+            }
+        }
+
+        @keyframes right-dn {
+            0% {
+                left: -100%;
+                height: 0;
+            }
+
+            50% {
+                left: 0;
+                height: 0;
+            }
+
+            100% {
+                height: 100%;
+                left: 0;
+            }
+        }
+
+        .effect .effect-text h2 {
+            height: 45px;
+            color: #ffffff;
+            font-size: 25px;
+            margin: 0;
+        }
+
+        .effect .effect-text .text {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .effect .effect-btn .btn {
+            display: inline-block;
+            height: 35px;
+            padding: 7px 15px;
+            color: #333333;
+            background: #ffffff;
+
+        }
+
+        @media (max-width: 768px) {
+            .row1 {
+                flex-direction: column;
+            }
+
+            .card1 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .card-title1 {
+                font-size: 150px;
+                height: 70px;
+            }
+
+            .card-subtitle1 {
+                font-size: large;
+                margin-top: 10px;
+            }
+
+            .card-text1 {
+                margin-top: 30px;
+                font-size: medium;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 100%;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            .column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .h5 {
+                padding: 30px;
+                font-size: 30px;
+            }
+
+        }
+
+        /* FOOTER */
+        body {
+            color: #ccc
+        }
+
+        .footer-widget p {
+            margin-bottom: 27px;
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            color: white;
+            line-height: 28px;
+        }
+
+        .animate-border {
+            position: relative;
+            display: block;
+            width: 115px;
+            height: 3px;
+            background: #007bff;
+        }
+
+        .animate-border:after {
+            position: absolute;
+            content: "";
+            width: 35px;
+            height: 3px;
+            left: 0;
+            bottom: 0;
+            border-left: 10px solid #fff;
+            border-right: 10px solid #fff;
+            -webkit-animation: animborder 2s linear infinite;
+            animation: animborder 2s linear infinite;
+        }
+
+        @-webkit-keyframes animborder {
+            0% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+            }
+
+            100% {
+                -webkit-transform: translateX(113px);
+                transform: translateX(113px);
+            }
+        }
+
+        @keyframes animborder {
+            0% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+            }
+
+            100% {
+                -webkit-transform: translateX(113px);
+                transform: translateX(113px);
+            }
+        }
+
+        .animate-border.border-white:after {
+            border-color: #fff;
+        }
+
+        .animate-border.border-yellow:after {
+            border-color: #F5B02E;
+        }
+
+        .animate-border.border-orange:after {
+            border-right-color: #007bff;
+            border-left-color: #007bff;
+        }
+
+        .animate-border.border-ash:after {
+            border-right-color: #EEF0EF;
+            border-left-color: #EEF0EF;
+        }
+
+        .animate-border.border-offwhite:after {
+            border-right-color: #F7F9F8;
+            border-left-color: #F7F9F8;
+        }
+
+        /* Animated heading border */
+        @keyframes primary-short {
+            0% {
+                width: 15%;
+            }
+
+            50% {
+                width: 90%;
+            }
+
+            100% {
+                width: 10%;
+            }
+        }
+
+        @keyframes primary-long {
+            0% {
+                width: 80%;
+            }
+
+            50% {
+                width: 0%;
+            }
+
+            100% {
+                width: 80%;
+            }
+        }
+
+        .dk-footer {
+            padding: 75px 0 0;
+            background-color: #151414;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dk-footer .contact-us {
+            margin-top: 0;
+            margin-bottom: 30px;
+            padding-left: 80px;
+        }
+
+        .dk-footer .contact-us .contact-info {
+            margin-left: 50px;
+        }
+
+        .dk-footer .contact-us.contact-us-last {
+            margin-left: -80px;
+        }
+
+        .dk-footer .contact-icon i {
+            font-size: 24px;
+            top: -15px;
+            position: relative;
+            color: #007bff;
+        }
+
+        .dk-footer-box-info {
+            position: relative;
+            top: -80px;
+            padding: 40px;
+            height: 450px;
+            z-index: 2;
+        }
+
+        .dk-footer-box-info .footer-social-link h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .dk-footer-box-info .footer-social-link ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dk-footer-box-info .footer-social-link li {
+            display: inline-block;
+        }
+
+        .dk-footer-box-info .footer-social-link a i {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            background: #000;
+            margin-right: 5px;
+            color: #fff;
+        }
+
+        .dk-footer-box-info .footer-social-link a i.fa-facebook {
+            background-color: #3B5998;
+        }
+
+        .dk-footer-box-info .footer-social-link a i.fa-twitter {
+            background-color: #55ACEE;
+        }
+
+        .dk-footer-box-info .footer-social-link a i.fa-google-plus {
+            background-color: #DD4B39;
+        }
+
+        .dk-footer-box-info .footer-social-link a i.fa-linkedin {
+            background-color: #0976B4;
+        }
+
+        .dk-footer-box-info .footer-social-link a i.fa-instagram {
+            background-color: #B7242A;
+        }
+
+        .footer-info-text {
+            margin: 26px 0 32px;
+        }
+
+        .footer-left-widget {
+            padding-left: 80px;
+        }
+
+        .footer-widget .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .footer-widget h3 {
+            font-size: 24px;
+            color: #fff;
+            position: relative;
+            margin-bottom: 15px;
+            max-width: -webkit-fit-content;
+            max-width: -moz-fit-content;
+            max-width: fit-content;
+        }
+
+        .footer-widget ul {
+            width: 50%;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-widget li {
+            margin-bottom: 18px;
+        }
+
+        .footer-widget p {
+            margin-bottom: 27px;
+        }
+
+        .footer-widget a {
+            color: #878787;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .footer-widget a:hover {
+            color: #007bff;
+        }
+
+        .footer-widget:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .dk-footer-form {
+            position: relative;
+        }
+
+        .dk-footer-form input[type=email] {
+            padding: 14px 28px;
+            border-radius: 50px;
+            background: #2E2E2E;
+            border: 1px solid #2E2E2E;
+        }
+
+        .dk-footer-form input::-webkit-input-placeholder,
+        .dk-footer-form input::-moz-placeholder,
+        .dk-footer-form input:-ms-input-placeholder,
+        .dk-footer-form input::-ms-input-placeholder,
+        .dk-footer-form input::-webkit-input-placeholder {
+            color: #878787;
+            font-size: 14px;
+        }
+
+        .dk-footer-form input::-webkit-input-placeholder,
+        .dk-footer-form input::-moz-placeholder,
+        .dk-footer-form input:-ms-input-placeholder,
+        .dk-footer-form input::-ms-input-placeholder,
+        .dk-footer-form input::placeholder {
+            color: #878787;
+            font-size: 14px;
+        }
+
+        .dk-footer-form button[type=submit] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 12px 24px 12px 17px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border: 1px solid #007bff;
+            background: #007bff;
+            color: #fff;
+        }
+
+        .dk-footer-form button:hover {
+            cursor: pointer;
+        }
+
+        /* ==========================
+
+    Contact
+
+=============================*/
+        .contact-us {
+            position: relative;
+            z-index: 2;
+            margin-top: 65px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .contact-icon {
+            position: absolute;
+        }
+
+        .contact-icon i {
+            font-size: 36px;
+            top: -5px;
+            position: relative;
+            color: #007bff;
+        }
+
+        .contact-info {
+            margin-left: 75px;
+            color: #fff;
+        }
+
+        .contact-info h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .copyright {
+            padding: 28px 0;
+            margin-top: 55px;
+            background-color: #202020;
+        }
+
+        .copyright span,
+        .copyright a {
+            color: #878787;
+            -webkit-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+        }
+
+        .copyright a:hover {
+            color: #007bff;
+        }
+
+        .copyright-menu ul {
+            text-align: right;
+            margin: 0;
+        }
+
+        .copyright-menu li {
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+        .back-to-top {
+            position: relative;
+            z-index: 2;
+        }
+
+        .back-to-top .btn-dark {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            padding: 0;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2e2e2e;
+            border-color: #2e2e2e;
+            display: none;
+            z-index: 999;
+            -webkit-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+        }
+
+        .back-to-top .btn-dark:hover {
+            cursor: pointer;
+            background: #FA6742;
+            border-color: #FA6742;
+        }
+
+        /* Default styles for larger screens */
+        .dk-footer {
+            padding: 75px 0 0;
+        }
+
+        .footer-widget ul {
+            width: 50%;
+        }
+
+        /* Adjust styles for medium-sized screens */
+        @media (max-width: 991px) {
+            .dk-footer {
+                padding: 50px 0 0;
+            }
+
+            .footer-widget ul {
+                width: 100%;
+            }
+        }
+
+        /* Adjust styles for small screens (e.g., mobile devices) */
+        @media (max-width: 767px) {
+            .dk-footer {
+                padding: 30px 0 0;
+            }
+
+            .footer-widget ul {
+                width: 100%;
+            }
+
+            .contact-info {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .footer-awarad {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .footer-awarad p {
+                margin-left: 0;
+            }
+
+            .dk-footer-form {
+                text-align: center;
+            }
+
+            .dk-footer-form input[type=email] {
+                width: 100%;
+            }
+
+            .dk-footer-form button[type=submit] {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-top: 15px;
+            }
+
+            .section-heading {
+                margin-top: 40px;
+            }
+
+            #call {
+                margin-left: 0px;
+            }
+        }
+
+        /* Additional adjustments for extra small screens (e.g., very small devices) */
+        @media (max-width: 575px) {
+            .dk-footer {
+                padding: 20px 0 0;
+            }
+
+            .footer-widget h3 {
+                font-size: 20px;
+            }
+
+            .footer-widget li {
+                margin-bottom: 10px;
+            }
+
+            .copyright-menu ul {
+                text-align: center;
+            }
+
+            .copyright-menu li {
+                display: block;
+                padding-left: 0;
+                margin-bottom: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section
+        style="background-image: url(https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/csm_Px8_72d3b93502.jpg); height: 1000px; background-repeat: no-repeat; background-size: cover;">
+        <h1
+            style="color: white;position:absolute; margin: 25px; font-family: Abril Fatface; text-shadow: 3px 4px rgb(22, 22, 22); text-shadow: 2px 2px rgb(255, 111, 0);">
+            B&W</h1>
+        <p
+            style="color: rgb(255, 255, 255); position: absolute; font-size: 25px;margin-top: 200px; margin-left: 100px; font-weight: 900; font-family: Chakra Petch; text-shadow: 1px 1px rgb(219, 103, 14);">
+            Thinking Of Buying A New Headphone ?</p>
+        <h2
+            style="color: white; position: absolute; font-size: 50px;margin-top: 240px; margin-left: 100px; font-weight: 900; font-family: Chakra Petch; text-shadow: 2px 2px rgb(255, 115, 0);">
+            Welcome To</h2>
+        <h3
+            style="color: rgb(255, 255, 255); position: absolute; font-size: 100px;margin-top: 280px; margin-left: 100px; font-weight: 900; font-family: Chakra Petch; text-shadow: 4px 2px rgb(255, 85, 0);">
+            Bowers & Wilkins</h3>
+        <div class="nav-btn" style="position: absolute;">
+            <button class="newbtn">Shop Now</button>
+        </div>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div style="width: 100%; position: absolute; background-color: rgb(36, 33, 33);">
+                <h5 class="text-white h4"
+                    style=" margin: 25px; font-family: Abril Fatface; text-shadow: 4px 6px rgb(28, 28, 28); font-size: xx-large;">
+                    Bowers & Wilkins</h5>
+                <ul class="nav" style="display: block; text-align: center;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"
+                            style="color: white; font-weight: bold; font-size: larger;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-weight: bold; font-size: larger;">Watch
+                            Video</a>
+                    </li>
+                    <li class="nav-item dropdown text-light">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: white; font-weight: bold; font-size: larger;">
+                            Blocks
+                        </a>
+                        <ul class="dropdown-menu"
+                            style="width:100%; text-align: center; background-color: black; background-color: rgb(36, 33, 33); padding: 20px;">
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Menu
+                                    Pages</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Headers</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Images
+                                    & Videos</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Sliders
+                                    & Galleries</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Shops</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Features</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Content</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Info</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Terms
+                                    & Conditions</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Forms
+                                    & Maps</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Pricing
+                                    Tables</a></li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Tables</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Social</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Contacts</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style=" color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Help</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown text-light">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: white; font-weight: bold; font-size: larger;">
+                            Demo Pages
+                        </a>
+                        <div class="social-link">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="dropdown-menu"
+                            style="width:100%; text-align: center; background-color: rgb(36, 33, 33); padding: 20px;">
+                            <li><a class="dropdown-item" href="#"
+                                    style="color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Headphones</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style="color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Shoes</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    style="color: rgb(147, 143, 143); background-color: rgb(36, 33, 33); font-weight: bold;">Watches</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-sliders"
+                            style="color: #ffffff; font-size: 30px;"></i></span>
+                </button>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <h4
+            style="color: white; text-align: center; padding: 50px; font-size: 50px; font-weight: bolder; font-family: Chakra Petch;">
+            Why Bowers &
+            Wilkins?</h4>
+        <div>
+            <p style="text-align: center; color: white; font-size: 20px; font-weight: 800; font-family: Chakra Petch;">
+                B&W discovered a very lightweight carbon dome allowing them to extend its usable frequency response out
+                to more than double the range of human hearing to an incredible 47,000 Hz.
+                <br>
+                Bowers & Wilkins leverages over 50 years of experience in building some of the finest high performance
+                loudspeakers in the world.
+                <br>
+                B&W has a rich pedigree in speaker design, and its 800 series is the pinnacle of the British company’s
+                impressive lineup.
+            </p>
+        </div>
+        <div>
+            <h5
+                style="background-color: orangered; color: white; text-align: center; padding: 60px; margin-top: 50px; font-size: 50px; font-weight: bolder; font-family: Chakra Petch;">
+                We Will Help You To Choose Our Best Headphones!</h5>
+        </div>
+        <div>
+            <h6
+                style="color: white; font-size: 50px; text-align: center; margin-top: 40px; font-weight: bold; font-family:Chakra Petch;">
+                Hottest <span style="color: orangered;">Headphones</span> Of The <span
+                    style="color: orangered;">Month</span></h6>
+            <div class="container-card">
+                <div class="row" style="margin-top: 40px; margin-left: 0; margin-right: 0;">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://theawesomer.com/photos/2016/09/bowers_wilkins_p7_wireless_headphones_4.jpg"
+                                class="card-img-top" alt="Portfolio Item 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Bowers & Wilkins P7 Wireless Headphones</h5>
+                                <p class="card-text">Bowers & Wilkins’ flagship headphones now have a Bluetooth variant
+                                    that lasts up
+                                    to 17h per charge. Enjoy the P7’s balanced output and wide delivery on a variety of
+                                    devices. You
+                                    really should use them with high-end setups as well to hear what they can do.</p>
+                                <a href="#" class="card-link">Learn More...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://theawesomer.com/photos/2022/10/bw_px8_007_headphones_3.jpg"
+                                class="card-img-top" alt="Portfolio Item 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Bowers & Wilkins Px8 007 Edition Headphones</h5>
+                                <p class="card-text">Bowers & Wilkins celebrates 50 years of James Bond with this
+                                    special edition of
+                                    their wireless Px8 headphones. They’re decked out in Midnight Blue Nappa leather,
+                                    with a red
+                                    power slider, a small 007 logo, and Bond’s gun barrel design.</p>
+                                <a href="#" class="card-link">Learn More...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://theawesomer.com/photos/2018/01/bowers_wilkins_p9_headphones_1.jpg"
+                                class="card-img-top" alt="Portfolio Item 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Bowers & Wilkins P9 Wired Headphones</h5>
+                                <p class="card-text">A truly exquisite over-the-ear headphone featuring luxurious
+                                    materials like
+                                    Italian Saffiano leather and a durable forged aluminum headband. Specialized piston
+                                    diaphragm
+                                    drivers provide a clean and spacious sound like being in the studio with the
+                                    recording artist.</p>
+                                <a href="#" class="card-link">Learn More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h6
+            style="font-size: 50px; text-align: center; margin-top: 40px; font-weight: bold; font-family: Chakra Petch; color: white;">
+            Our Newest <span style="color: orangered;">Arrivals !</span></h6>
+        <h6
+            style="color: white; font-size: 40px; text-align: center; margin-top: 40px; font-weight: bold; font-family:Chakra Petch;">
+            <i class="fa-solid fa-headphones" style="color: orangered;"></i> HEADPHONES
+        </h6>
+        <div class="container">
+            <div class="row" style="margin-top: 50px;margin: 100px;">
+                <div class="col">
+                    <div class="effect">
+                        <div class="effect-img">
+                            <img id="img"
+                                src="https://www.ooberpad.com/cdn/shop/products/B_WPX7-silver.jpg?v=1670999441&width=750"
+                                class="img-fluid" alt="Image 1">
+
+                        </div>
+                        <p
+                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                            Bowers & Wilkins Px7 <span style="color: #ffffff;"><br>WHITE</span></p>
+                        <div class="effect-text">
+                            <div class="inner">
+                                <h2 style="color: orangered;">B&W Px7</h2>
+                                <p class="text" style="font-weight: bold; font-size: larger;">₹ 35,000.00Rs</p>
+                                <div class="effect-btn">
+                                    <a href="#" class="btn"
+                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                            class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i> BUY
+                                        NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="effect">
+                        <div class="effect-img">
+                            <img id="img"
+                                src="https://www.ooberpad.com/cdn/shop/products/B_WPX7-spacegrey.jpg?v=1670999441&width=750"
+                                class="img-fluid" alt="Image 1">
+                        </div>
+                        <p
+                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                            Bowers & Wilkins Px7 <span style="color: #ffffff;"><br>BLACK</span></p>
+                        <div class="effect-text">
+                            <div class="inner">
+                                <h2 style="color: orangered;">B&W Px7</h2>
+                                <p class="text" style="font-weight: bold; font-size: larger;">₹ 35,500.00Rs</p>
+                                <div class="effect-btn">
+                                    <a href="#" class="btn"
+                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                            class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i> BUY
+                                        NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="effect">
+                        <div class="effect-img">
+                            <img id="img"
+                                src="https://www.ooberpad.com/cdn/shop/products/Px8McLarenEdition_22c59c4f-2683-48aa-ac11-c8a0974233ea.jpg?v=1670576467&width=750"
+                                class="img-fluid" alt="Image 2">
+                        </div>
+                        <p
+                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                            B&W Px8 McLaren Edition<span style="color: #ffffff;"><br>ORANGE</span></p>
+                        <div class="effect-text">
+                            <div class="inner">
+                                <h2 style="color: orangered;">B&W Px8 McLaren Edition</h2>
+                                <p class="text" style="font-weight: bold; font-size: larger; margin-top: 30px;">₹
+                                    145,000.00Rs</p>
+                                <div class="effect-btn">
+                                    <a href="#" class="btn"
+                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                            class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i> BUY
+                                        NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="effect">
+                        <div class="effect-img">
+                            <img id="img"
+                                src="https://www.ooberpad.com/cdn/shop/products/B_WPx8007_289489c1-f53b-4e54-84e7-ec9824595929.jpg?v=1678880224&width=750"
+                                class="img-fluid" alt="Image 3">
+                        </div>
+                        <p
+                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                            B&W Px8 007-Special Edition <span style="color: #ffffff;"><br>DARK BLUE</span></p>
+                        <div class="effect-text">
+                            <div class="inner">
+                                <h2 style="color: orangered;">B&W Px8 007-Special Edition</h2>
+                                <p class="text" style="font-weight: bold; font-size: larger; margin-top: 40px;">₹
+                                    124,999.00Rs</p>
+                                <div class="effect-btn">
+                                    <a href="#" class="btn"
+                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                            class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i> BUY
+                                        NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col">
+                        <div class="effect">
+                            <div class="effect-img">
+                                <img id="img"
+                                    src="https://www.ooberpad.com/cdn/shop/products/B_WPx8-tan_e9f93756-d8e7-43ab-a2c3-e1a05e9247dd.jpg?v=1673688938&width=750"
+                                    class="img-fluid" alt="Image 1">
+
+                            </div>
+                            <p
+                                style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                Bowers & Wilkins Px8<span style="color: #ffffff;"><br>GOLD</span></p>
+                            <div class="effect-text">
+                                <div class="inner">
+                                    <h2 style="color: orangered;">B&W Px8</h2>
+                                    <p class="text" style="font-weight: bold; font-size: larger;">₹ 94,999.00Rs</p>
+                                    <div class="effect-btn">
+                                        <a href="#" class="btn"
+                                            style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                            BUY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="effect">
+                            <div class="effect-img">
+                                <img id="img"
+                                    src="https://www.ooberpad.com/cdn/shop/products/B_WPx7_S2-grey.jpg?v=1670560675&width=750"
+                                    class="img-fluid" alt="Image 1">
+                            </div>
+                            <p
+                                style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                Bowers & Wilkins Px7 S2<span style="color: #ffffff;"><br>WHITE</span></p>
+                            <div class="effect-text">
+                                <div class="inner">
+                                    <h2 style="color: orangered;">B&W Px7 S2</h2>
+                                    <p class="text" style="font-weight: bold; font-size: larger;">₹ 69,999.00Rs</p>
+                                    <div class="effect-btn">
+                                        <a href="#" class="btn"
+                                            style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                            BUY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="effect">
+                            <div class="effect-img">
+                                <img id="img"
+                                    src="https://www.ooberpad.com/cdn/shop/products/B_WPx7_S2-black_5809c0a0-3630-4366-8bb0-30c29a89af57.jpg?v=1673688991&width=750"
+                                    class="img-fluid" alt="Image 2">
+                            </div>
+                            <p
+                                style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                Bowers & Wilkins Px7 S2<span style="color: #ffffff;"><br>BLACK</span></p>
+                            <div class="effect-text">
+                                <div class="inner">
+                                    <h2 style="color: orangered;">B&W Px7 S2</h2>
+                                    <p class="text" style="font-weight: bold; font-size: larger;">₹ 69,999.00Rs</p>
+                                    <div class="effect-btn">
+                                        <a href="#" class="btn"
+                                            style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                            BUY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="effect">
+                            <div class="effect-img">
+                                <img id="img"
+                                    src="https://www.ooberpad.com/cdn/shop/products/B_WPx7_S2-blue.jpg?v=1670560675&width=750"
+                                    class="img-fluid" alt="Image 3">
+                            </div>
+                            <p
+                                style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                Bowers & Wilkins Px7 S2<span style="color: #ffffff;"><br>NAVY BLUE</span></p>
+                            <div class="effect-text">
+                                <div class="inner">
+                                    <h2 style="color: orangered;">B&W Px7 S2</h2>
+                                    <p class="text" style="font-weight: bold; font-size: larger;">₹ 69,999.00Rs</p>
+                                    <div class="effect-btn">
+                                        <a href="#" class="btn"
+                                            style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                class="fa-sharp fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                            BUY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6
+                        style="color: white; font-size: 40px; text-align: center; margin-top: 40px; font-weight: bold; font-family:Chakra Petch;">
+                        <i class="fa-solid fa-volume-high" style="color: orangered;"></i> SPEAKERS
+                    </h6>
+
+                    <div class="container">
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col">
+                                <div class="effect">
+                                    <div class="effect-img">
+                                        <img id="img"
+                                            src="https://www.ooberpad.com/cdn/shop/products/FormationDuo_white_fa60d3f6-27cb-49a7-9219-51fe01d51427.jpg?v=1644838261&width=750"
+                                            class="img-fluid" alt="Image 1">
+
+                                    </div>
+                                    <p
+                                        style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                        B&W Formation Duo <span style="color: #ffffff;"><br>WHITE</span></p>
+                                    <div class="effect-text">
+                                        <div class="inner">
+                                            <h2 style="color: orangered;">B&W Formation Duo</h2>
+                                            <p class="text"
+                                                style="font-weight: bold; font-size: larger; margin-top: 20px;">₹
+                                                550,000.00Rs</p>
+                                            <div class="effect-btn">
+                                                <a href="#" class="btn"
+                                                    style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                        class="fa-sharp fa-solid fa-cart-shopping"
+                                                        style="color: #ffffff;"></i> BUY NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="effect">
+                                    <div class="effect-img">
+                                        <img id="img"
+                                            src="https://www.ooberpad.com/cdn/shop/products/B_WFormationDuo_Pair.jpg?v=1639994882&width=750"
+                                            class="img-fluid" alt="Image 1">
+                                    </div>
+                                    <p
+                                        style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                        B&W Formation Duo<span style="color: #ffffff;"><br>BLACK</span></p>
+                                    <div class="effect-text">
+                                        <div class="inner">
+                                            <h2 style="color: orangered;">B&W Formation Duo</h2>
+                                            <p class="text"
+                                                style="font-weight: bold; font-size: larger; margin-top: 20px;">₹
+                                                550,000.00Rs</p>
+                                            <div class="effect-btn">
+                                                <a href="#" class="btn"
+                                                    style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                        class="fa-sharp fa-solid fa-cart-shopping"
+                                                        style="color: #ffffff;"></i> BUY NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="effect">
+                                    <div class="effect-img">
+                                        <img id="img"
+                                            src="https://www.ooberpad.com/cdn/shop/products/Untitled.png?v=1673591923&width=750"
+                                            class="img-fluid" alt="Image 2">
+                                    </div>
+                                    <p
+                                        style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                        B&W AM-1 Outdoor<span style="color: #ffffff;"><br>BLACK</span></p>
+                                    <div class="effect-text">
+                                        <div class="inner">
+                                            <h2 style="color: orangered;">B&W AM-1 Outdoor</h2>
+                                            <p class="text"
+                                                style="font-weight: bold; font-size: larger; margin-top: 20px;">₹
+                                                92,000.00Rs</p>
+                                            <div class="effect-btn">
+                                                <a href="#" class="btn"
+                                                    style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                        class="fa-sharp fa-solid fa-cart-shopping"
+                                                        style="color: #ffffff;"></i> BUY NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="effect">
+                                    <div class="effect-img">
+                                        <img id="img"
+                                            src="https://www.ooberpad.com/cdn/shop/products/B_WAM-1_white_525e8dbc-be09-4e47-8592-8d18406bd87b.jpg?v=1673591923&width=750"
+                                            class="img-fluid" alt="Image 3">
+                                    </div>
+                                    <p
+                                        style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                        B&W AM-1 Outdoor<span style="color: #ffffff;"><br>WHITE</span></p>
+                                    <div class="effect-text">
+                                        <div class="inner">
+                                            <h2 style="color: orangered;">B&W AM-1 Outdoor</h2>
+                                            <p class="text"
+                                                style="font-weight: bold; font-size: larger; margin-top: 20px;">₹
+                                                92,000.00Rs</p>
+                                            <div class="effect-btn">
+                                                <a href="#" class="btn"
+                                                    style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                        class="fa-sharp fa-solid fa-cart-shopping"
+                                                        style="color: #ffffff;"></i> BUY NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 50px;">
+                                <div class="col">
+                                    <div class="effect">
+                                        <div class="effect-img">
+                                            <img id="img"
+                                                src="https://www.ooberpad.com/cdn/shop/products/B_W702-image3.jpg?v=1632387463&width=750"
+                                                class="img-fluid" alt="Image 1">
+
+                                        </div>
+                                        <p
+                                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                            B&W 702 Signature<span style="color: #ffffff;"><br>WOODEN</span></p>
+                                        <div class="effect-text">
+                                            <div class="inner">
+                                                <h2 style="color: orangered;">B&W 702 Signature</h2>
+                                                <p class="text"
+                                                    style="font-weight: bold; font-size: larger; margin-top: 20px;">₹
+                                                    3,99,999.00Rs</p>
+                                                <div class="effect-btn">
+                                                    <a href="#" class="btn"
+                                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                            class="fa-sharp fa-solid fa-cart-shopping"
+                                                            style="color: #ffffff;"></i> BUY NOW</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="effect">
+                                        <div class="effect-img">
+                                            <img id="img"
+                                                src="https://www.ooberpad.com/cdn/shop/products/B_W703S3_b6810d3a-ccf5-4db4-bf4c-40cacd93c9b5.jpg?v=1673935874&width=750"
+                                                class="img-fluid" alt="Image 1">
+                                        </div>
+                                        <p
+                                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                            B&W 703 S3 Floorstanding<span style="color: #ffffff;"><br>BLACK</span></p>
+                                        <div class="effect-text">
+                                            <div class="inner">
+                                                <h2 style="color: orangered;">B&W 703 S3</h2>
+                                                <p class="text" style="font-weight: bold; font-size: larger;">₹
+                                                    7,65,999.00Rs</p>
+                                                <div class="effect-btn">
+                                                    <a href="#" class="btn"
+                                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                            class="fa-sharp fa-solid fa-cart-shopping"
+                                                            style="color: #ffffff;"></i> BUY NOW</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="effect">
+                                        <div class="effect-img">
+                                            <img id="img"
+                                                src="https://www.ooberpad.com/cdn/shop/products/B_W-703S3-White-Pair.jpg?v=1673935874&width=750"
+                                                class="img-fluid" alt="Image 2">
+                                        </div>
+                                        <p
+                                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                            B&W 703 S3 Floorstanding<span style="color: #ffffff;"><br>WHITE</span></p>
+                                        <div class="effect-text">
+                                            <div class="inner">
+                                                <h2 style="color: orangered;">B&W 703 S3</h2>
+                                                <p class="text" style="font-weight: bold; font-size: larger;">₹
+                                                    7,65,999.00Rs</p>
+                                                <div class="effect-btn">
+                                                    <a href="#" class="btn"
+                                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                            class="fa-sharp fa-solid fa-cart-shopping"
+                                                            style="color: #ffffff;"></i> BUY NOW</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="effect">
+                                        <div class="effect-img">
+                                            <img id="img"
+                                                src="https://www.ooberpad.com/cdn/shop/products/B_W-703S3-Mocha-pair.jpg?v=1673935874&width=750"
+                                                class="img-fluid" alt="Image 3">
+                                        </div>
+                                        <p
+                                            style="color: orangered; text-align: center; font-weight: bold; font-family:Chakra Petch; font-size: larger; margin-top: 10px;">
+                                            B&W 703 S3 Floorstanding<span style="color: #ffffff;"><br>WOODEN</span></p>
+                                        <div class="effect-text">
+                                            <div class="inner">
+                                                <h2 style="color: orangered;">B&W 703 S3</h2>
+                                                <p class="text" style="font-weight: bold; font-size: larger;">₹
+                                                    7,65,999.00Rs</p>
+                                                <div class="effect-btn">
+                                                    <a href="#" class="btn"
+                                                        style="background-color: orangered; color: white; font-weight: bold;"><i
+                                                            class="fa-sharp fa-solid fa-cart-shopping"
+                                                            style="color: #ffffff;"></i> BUY NOW</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    </section>
+    <section>
+        <div>
+            <div style="background-color: orangered; color: white; padding: 60px; margin-top: 100px;">
+                <h5 style="font-size: 50px; font-weight: bolder; font-family: Chakra Petch;">
+                    <span style="font-size: x-large; font-weight: bolder;">HURRY UP! THE OFFER IS LIMITED...
+                    </span><br>Like
+                    It? Pre-Order And Get A Discount.
+                </h5>
+                <button class="bbtn">LEARN MORE</button>
+            </div>
+            <div>
+                <p
+                    style="font-size: 45px; color: white; font-family: Chakra Petch; font-weight: bolder; text-align: center; margin-top: 100px;margin-bottom: 50px;">
+                    Why Do You Have To Buy Our <span style="color: orangered;">Headphones<i class="fa-solid fa-question"
+                            style="color:orangered;"></i></span></p>
+            </div>
+            <div class="row1">
+                <div class="flex-container" style="display: flex;justify-content: space-evenly;">
+                    <div class="card1" style="width: 20rem;">
+                        <div class="card-body1">
+                            <h5 class="card-title1">1.</h5>
+                            <h6 class="card-subtitle1">HIGH QUALITY</h6>
+                            <p class="card-text1">We Provide Our Best And High Quality Products To Our Customers. We Are
+                                The
+                                Best In The World. We provide Worlds Finest And Unique Products.</p>
+                            <a href="#" class="card-link">Learn More...</a>
+                        </div>
+                    </div>
+                    <div class="card1" style="width: 20rem;">
+                        <div class="card-body1">
+                            <h5 class="card-title1">2.</h5>
+                            <h6 class="card-subtitle1">ORIGINAL DEVICES</h6>
+                            <p class="card-text1">We Provide Our Original Devices, There Are Duplicate Products Of Ours.
+                                To
+                                Ensure Our Product Please Check The (B&W) Logo Inside Our Products.</p>
+                            <a href="#" class="card-link">Learn More...</a>
+                        </div>
+                    </div>
+                    <div class="card1" style="width: 20rem;">
+                        <div class="card-body1">
+                            <h5 class="card-title1">3.</h5>
+                            <h6 class="card-subtitle1">YEAR WARRANTY</h6>
+                            <p class="card-text1">We Provide One Year Warranty For All Our Products. Customers Can
+                                Extend
+                                Their Warranty After The Company Warranty Expires As Per The Terms&Co.</p>
+                            <a href="#" class="card-link">Learn More...</a>
+                        </div>
+                    </div>
+                    <div class="card1" style="width: 20rem;">
+                        <div class="card-body1">
+                            <h5 class="card-title1">4.</h5>
+                            <h6 class="card-subtitle1">PRODUCT REPLACEMENT</h6>
+                            <p class="card-text1">Customers Can Replace Their Products If There Any Manufacturing
+                                Defects Or
+                                Physical Damage. This Offer Will be Valid Till The Warrant Period.</p>
+                            <a href="#" class="card-link">Learn More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <h6
+                            style="color: rgb(178, 178, 178); font-size: 25px; font-weight: bold; text-align: center; margin-top: 60px; font-family: Chakra Petch;">
+                            STILL NOT CONVICTED?</h6>
+                        <h5
+                            style="color: white; font-size: 60px; font-weight: bolder; text-align: center; margin-top: 10px; font-family: Chakra Petch;">
+                            Visit us And See <span style="color: orangered;">Youself !</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d80668.42076257362!2d-0.371386!3d50.814711!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDQ4JzUzLjAiTiAwwrAyMicxNy4wIlc!5e0!3m2!1sen!2sin!4v1699512302919!5m2!1sen!2sin"
+                        width="100%" height="600px" style="border:0; margin-top: 50px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="dk-footer" class="dk-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="dk-footer-box-info">
+                        <a href="index.html" class="footer-logo">
+                            <img src="https://www.pinclipart.com/picdir/big/523-5237667_headphones-clip-art.png"
+                                width="200px" alt="footer_logo" class="img-fluid">
+                        </a>
+                        <p class="footer-info-text">
+                            B&W was founded in 1966 by John Bowers in Worthing, West Sussex, England.
+                        </p>
+                        <div class="footer-social-link">
+                            <h3>Follow us</h3>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social link -->
+                    </div>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-us">
+                                <div class="contact-icon">
+                                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    <h3>Worthing,UK</h3>
+                                    <p>A259 Chapel Road</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-md-6">
+                            <div class="contact-us contact-us-last" id="call">
+                                <div class="contact-icon">
+                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    <h3>95 711 9 5353</h3>
+                                    <p>Give us a call</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Contact Row -->
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget footer-left-widget">
+                                <div class="section-heading">
+                                    <h3>Useful Links</h3>
+                                    <span class="animate-border border-black"></span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Team</a>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">Contact us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Faq</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Footer Widget -->
+                        </div>
+                        <!-- End col -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget">
+                                <div class="section-heading">
+                                    <h3>Subscribe</h3>
+                                    <span class="animate-border border-black"></span>
+                                </div>
+                                <p>To Know About More From Us Please Subscribe.</p>
+                                <form action="#">
+                                    <div class="form-row">
+                                        <div class="col dk-footer-form">
+                                            <input type="email" class="form-control" placeholder="Email Address">
+                                            <button type="submit" class="btn btn-dark">
+                                                <i class="fa fa-send"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End form -->
+                            </div>
+                            <!-- End footer widget -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Widget Row -->
+        </div>
+        <!-- End Contact Container -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center text-md-left">Copyright © 2023, All Right Reserved </p>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul class="list-inline text-center text-md-right">
+                            <li class="list-inline-item">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Terms</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+        </div>
+        <!-- End Copyright -->
+        <!-- Back to top -->
+        <div id="back-to-top" class="back-to-top">
+            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                <i class="fa fa-angle-up"></i>
+            </button>
+        </div>
+        <!-- End Back to top -->
+    </footer>
+
+</body>
+
+</html>
